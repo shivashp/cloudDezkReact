@@ -6,6 +6,7 @@ body {
   font-family: Montserrat ,"Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   background-color: #fcf8f5;
+  overflow-x: hidden;
 }
 html {
   width: 100%;
@@ -34,9 +35,23 @@ h6.inverted {
   color: #fcf8f5;
   /*color: #286090;*/
 }
-p {
-  margin: 0 0 25px;
-  font-size: 18px;
-  line-height: 1.5;
+label {
+    font-size: 18px;
+    font-weight: 300;
+    color: #4d4d4d;
 }
-
+button.btn.btn-info {
+    background: #ed1e79;
+    border: none;
+    border-radius: 6px;
+    font-size: 21px;
+    text-transform: capitalize;
+    padding: 4px 50px;
+    font-weight: 600;
+}
+.form-group {
+    margin-bottom: 34px;
+}
+.form-control {
+  height:41px;
+}

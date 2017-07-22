@@ -5,10 +5,9 @@
   margin-bottom: 0;
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: black;
+  background: #fff;
 }
 .navbar-custom .navbar-toggle {
-  color: white;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 12px;
 }
@@ -17,25 +16,29 @@
   outline: none;
 }
 .navbar-custom .navbar-brand {
-  font-weight: 700;
+    font-weight: 600;
+    font-size: 21px;
+}
+.navbar {
+    min-height: 55px;
 }
 .navbar-custom .navbar-brand:focus {
   outline: none;
 }
 .navbar-custom a {
-  color: white;
+    color: #074889;
 }
 .navbar-custom .nav li a {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  border-bottom: 4px solid #000;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    text-transform: capitalize;
+    font-size: 18px;
 }
 .navbar-custom .nav li a:hover {
-  color: rgba(255, 255, 255, 0.8);
   outline: none;
   background-color: transparent;
-  border-bottom: 4px solid rgba(255,255,255,0.25);
+  transition: all 0.2s linear;
 }
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:active {
@@ -57,7 +60,7 @@
     padding: 0;
     border-bottom: none;
     letter-spacing: 1px;
-    background: #000;
+    background: #fff;
     -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
@@ -71,6 +74,24 @@
     background: black;
   }
 }
+@media (max-width: 768px) {
+  .navbar-custom .nav li a.page-scroll.highlight-anchor {
+    display: none;
+  }
+}
+
+#navbar-container {
+    display: flex;
+    flex:1;
+}
+.navbar-header  {
+    flex: 1;
+}
+
+#navbar-center {
+  flex: 1.5;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color: #074889;

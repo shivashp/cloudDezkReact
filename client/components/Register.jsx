@@ -87,20 +87,17 @@ class CreateAccount extends React.Component {
             {/*FirstName*/}
             <div className="row">
             <div className="form-group col-xs-6">
-                <label htmlFor="fname" className="control-label">First Name:</label>
+                <label htmlFor="fname" className="control-label">First Name *</label>
                 <input className="form-control" id="fname" placeholder="First Name"
                        name="firstName" data-toggle="tooltip" title="Enter your first name"
                        data-placement="right"
                        value={this.state.firstName}
                        onChange={(e)=> this.setState({firstName: e.target.value}) }
                        required/>
-                {!this.state.firstName ? <small className="bg-danger">
-                    First name is required
-                </small>:''}
             </div>
             {/*<LastName*/}
             <div className="form-group col-xs-6">
-                <label htmlFor="lname" className="control-label">Last Name:</label>
+                <label htmlFor="lname" className="control-label">Last Name *</label>
                 <input className="form-control" id="lname" placeholder="Last Name"
                        name="lastName"
                        data-toggle="tooltip"
@@ -109,15 +106,12 @@ class CreateAccount extends React.Component {
                        value={this.state.lastName}
                        onChange={(e)=> this.setState({lastName: e.target.value}) }
                        required/>
-                {!this.state.lastName ? <small className="bg-danger">
-                    Last name is required
-                </small>:''}
             </div>
             </div>
                 {/*Email*/}
                 <div className="row">
                 <div className="form-group  col-xs-6">
-                <label htmlFor="email" className="control-label">Email:</label>
+                <label htmlFor="email" className="control-label">Email *</label>
                 <input className="form-control" id="email" placeholder="Email Confirm"
                        name="email"
                        data-toggle="tooltip"
@@ -126,16 +120,13 @@ class CreateAccount extends React.Component {
                        value={this.state.email}
                        onChange={(e)=> this.setState({email: e.target.value}) }
                        required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
-                {!this.state.email ? <small className="bg-danger">
-                    Email is required
-                </small>:''}
                 {!FUNC.isInPattern(this.state.email,/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g) && this.state.email ? <small className="bg-danger">
                     Email is invalid
                 </small>:''}
             </div>
             {/*PhoneNumber*/}
             <div className="form-group col-xs-6">
-                <label htmlFor="phone" className="control-label">Phone number:</label>
+                <label htmlFor="phone" className="control-label">Phone number *</label>
                 <input className="form-control" id="phone" placeholder="Phone number"
                        name="phoneNumber"
                        data-toggle="tooltip"
@@ -144,9 +135,6 @@ class CreateAccount extends React.Component {
                        value={this.state.phoneNumber}
                        onChange={(e)=> this.setState({phoneNumber: e.target.value}) }
                        required pattern="[0-9]{3,12}$"/>
-                {!this.state.phoneNumber ? <small className="bg-danger">
-                    Phone number is required
-                </small>:''}
                 {!FUNC.isInPattern(this.state.phoneNumber,/[0-9]{3,12}$/g) && this.state.phoneNumber ? <small className="bg-danger">
                     Phone number is invalid
                 </small>:''}
@@ -156,7 +144,7 @@ class CreateAccount extends React.Component {
                 <div className="row">
             {/*Company*/}
             <div className="form-group col-xs-6">
-                <label htmlFor="company" className="control-label">Company:</label>
+                <label htmlFor="company" className="control-label">Company *</label>
                 <input className="form-control" id="company" placeholder="Company"
                        name="company"
                        data-toggle="tooltip"
@@ -165,13 +153,10 @@ class CreateAccount extends React.Component {
                        value={this.state.company}
                        onChange={(e)=> this.setState({company: e.target.value}) }
                        required/>
-                {!this.state.company ? <small className="bg-danger">
-                    Company is required
-                </small>:''}
             </div>
             {/*Country*/}
             <div className="form-group col-xs-6">
-                <label htmlFor="country" className="control-label">Country:</label>
+                <label htmlFor="country" className="control-label">Country *</label>
                 <select className="form-control" id="country" placeholder="Country"
                         name="country"
                         data-toggle="tooltip"
@@ -186,15 +171,12 @@ class CreateAccount extends React.Component {
                         })
                     }
                 </select>
-                {!this.state.country ? <small className="bg-danger">
-                    Country is required
-                </small>:''}
             </div>
                 </div>
                 <div className="row">
                     {/*Password */}
             <div className="form-group col-xs-6">
-                <label htmlFor="password" className="control-label">Password:</label>
+                <label htmlFor="password" className="control-label">Password *</label>
                 <input className="form-control" type="password" id="password" placeholder="Password"
                        name="password"
                        data-toggle="tooltip"
@@ -203,9 +185,6 @@ class CreateAccount extends React.Component {
                        value={this.state.password}
                        onChange={(e)=> this.setState({password: e.target.value}) }
                        required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
-                {!this.state.password ? <small className="bg-danger">
-                    Password is required
-                </small>:''}
                 {!FUNC.isInPattern(this.state.password,/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/g) && this.state.password ? <small className="bg-danger">
                     Must contain at least one number and one uppercase and lowercase letter, and at least 8 or
                     more characters
@@ -215,7 +194,7 @@ class CreateAccount extends React.Component {
 
             {/*Password Confirmation */}
             <div className="form-group col-xs-6">
-                <label htmlFor="confirmPassword" className="control-label">Confirm password:</label>
+                <label htmlFor="confirmPassword" className="control-label">Confirm password *</label>
                 <input className="form-control" type="password" id="confirmPassword" placeholder="Confirm password"
                        name="confirmPassword"
                        data-toggle="tooltip"
@@ -224,15 +203,12 @@ class CreateAccount extends React.Component {
                        value={this.state.confirmPassword}
                        onChange={(e)=> this.setState({confirmPassword: e.target.value}) }
                        required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
-                {!this.state.confirmPassword ? <small className="bg-danger">
-                    Password is required
-                </small>:''}
                 {this.state.confirmPassword!=this.state.password && this.state.confirmPassword ? <small className="bg-danger">
                     Does not match with source password
                 </small>:''}
             </div>
                 </div>
-            <span className="pull-right"><button className="btn btn-info">Submit</button></span>
+            <span>* Mandatory fields</span><span className="pull-right"><button className="btn btn-info">Submit</button></span>
         </form>
       </div>
     )
