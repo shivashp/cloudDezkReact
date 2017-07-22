@@ -1,0 +1,120 @@
+.light {
+  font-weight: 400;
+}
+.navbar-custom {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+.navbar-custom .navbar-toggle {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:active {
+  outline: none;
+}
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+}
+.navbar-custom .navbar-brand:focus {
+  outline: none;
+}
+.navbar-custom a {
+  color: white;
+}
+.navbar-custom .nav li a {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  border-bottom: 4px solid #000;
+}
+.navbar-custom .nav li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  outline: none;
+  background-color: transparent;
+  border-bottom: 4px solid rgba(255,255,255,0.25);
+}
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li.active {
+  outline: none;
+}
+.navbar-custom .nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 4px solid rgba(255,255,255,0.25);
+}
+.navbar-custom .nav li.active a:hover {
+  color: white;
+}
+@media (min-width: 768px) {
+  .navbar-custom {
+    padding: 0;
+    border-bottom: none;
+    letter-spacing: 1px;
+    background: #000;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0,0,0,.35);
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.35);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.35);
+  }
+
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    background: black;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #074889;
+}
+#sub-nav {
+    margin-top: 50px;
+}
+
+#sub-nav>ul {
+  padding: 0;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+#sub-nav li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+.sub-nav-details {
+    margin-bottom: 50px;
+    color: #4d4d4d;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+}
+#sub-nav a {
+  font-size: 21px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #CAD8E6;
+}
+#sub-nav li.active>a {
+  color: #074889;
+}
+.register-form {
+  margin-top: 30px;
+}
+.role-content {
+    display: flex;
+}
+/*.role-content h4, .role-content h6, .connect-content h4 {
+    color: #074889;
+}*/
+/*.connect-content a {
+  color: #337ab7;
+}*/

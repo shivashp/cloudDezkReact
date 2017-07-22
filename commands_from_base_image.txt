@@ -1,0 +1,35 @@
+START WITH AMAZON LINUX INSTANCE - Includes - Git, Node, Python Dependencies
+    5  sudo yum install git
+    7  sudo git init
+	37  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.0/install.sh | bash
+	42  nvm install 4.4.5
+    39  export NVM_DIR="/home/ec2-user/.nvm"
+    40  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    41  . ~/.nvm/nvm.sh
+	
+	**** Now install nginx as well for reverse proxy
+	
+	Also install python dependencies as well - to be provided by Shervain - NEED TO WAIT FOR SHERVAIN
+	
+-- Create an AMI with the above and call it cloudDezkImagev1
+	
+NOW INSTALL THE SPECIFIC APPLICATION
+
+-- Need to refine the below as we are not getting the full code base for every server
+   28  git clone  https://github.com/venkatoddi/cloudDezk
+   29  cd cloudDezk
+   31  cd subscription
+   33  cd cloudDezkReact
+   35  npm install
+   72  npm run buildClient
+   73  npm run buildServer
+   
+TO UPDATE
+   75  git pull
+   76  npm run buildClient
+   77  npm run buildServer
+   
+-- THE BELOW IS ONLY REQUIRED WHEN TIMUX IS INSTALLED
+   83  tmux
+   84  tmux at
+   85  history > commands_from_base_image.txt
