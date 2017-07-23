@@ -139,3 +139,41 @@ h1, h2, h3, h4, h5, h6 {
 /*.connect-content a {
   color: #337ab7;
 }*/
+.card-header img {
+    max-width: 100%;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.card-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.card {
+    border: 1px solid #ddd;
+    padding: 30px;
+    text-align: center;
+}
+.card-body h4 {
+    color: #4d4d4d;
+    font-weight: 600;
+}
+.card-body {
+    margin-bottom: 50px;
+}
+.card-body p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+}
+.card-price {
+    font-size: 36px;
+    font-weight: 300;
+    color: #4d4d4d;
+}
+.card-price span {
+    font-size: 18px;
+    position: relative;
+    top: -15px;
+    left: 5px;
+}

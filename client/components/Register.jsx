@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import RoleLink from './RoleLink.jsx';
 import Connect from './Connect.jsx';
 import Subscription from './Subscription.jsx';
-
+import SubscribeCard from './widgets/SubscribeCard.jsx';
 
 class Register extends React.Component {
   constructor() {

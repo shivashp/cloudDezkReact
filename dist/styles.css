@@ -7,6 +7,7 @@ body {
   color: #333;
   background-color: #fcf8f5;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 html {
   width: 100%;

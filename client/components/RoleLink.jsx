@@ -22,20 +22,17 @@ class RoleLink extends React.Component {
             <form>
                 {/*accountid*/}
                 <div className="form-group">
-                    <label htmlFor="accountid" className="control-label">Account Id:</label>
+                    <label htmlFor="accountid" className="control-label">Account Id *</label>
                     <input className="form-control" id="accountid" placeholder="Account Id"
                            name="accountid"
                            data-toggle="tooltip" title="Enter your account id" data-placement="right"
                            value={this.state.accountid}
                            onChange={(e)=> this.setState({accountid: e.target.value}) }
                            required/>
-                    {!this.state.accountid ? <small className="bg-danger">
-                        Account id is required
-                    </small>:''}
                 </div>
                 {/*regions*/}
                 <div className="form-group">
-                    <label htmlFor="region" className="control-label">Region:</label>
+                    <label htmlFor="region" className="control-label">Region *</label>
                     <select className="form-control" id="region" placeholder="Region"
                             name="region"
                             data-toggle="tooltip"
@@ -50,22 +47,16 @@ class RoleLink extends React.Component {
                             })
                         }
                     </select>
-                    {!this.state.region ? <small className="bg-danger">
-                        Region is required
-                    </small>:''}
                 </div>
                 {/*arn*/}
                 <div className="form-group">
-                    <label htmlFor="arn" className="control-label">ARN:</label>
+                    <label htmlFor="arn" className="control-label">ARN *</label>
                     <input className="form-control" id="arn" placeholder="Account Id"
                            name="arn" data-toggle="tooltip" title="Enter your arn"
                            data-placement="right"
                            value={this.state.arn}
                            onChange={(e)=> this.setState({arn: e.target.value}) }
                            required/>
-                    {!this.state.arn ? <small className="bg-danger">
-                        Arn is required
-                    </small>:''}
 
                 </div>
                 {/*external id*/}
@@ -78,9 +69,6 @@ class RoleLink extends React.Component {
                            onChange={(e)=> this.setState({externalid: e.target.value}) }
                            readOnly={true}
                            required/>
-                    {!this.state.externalid ? <small className="bg-danger">
-                        External id is required
-                    </small>:''}
 
                 </div>
                 {/*aws link*/}
@@ -107,7 +95,7 @@ class RoleLink extends React.Component {
 
                 </div>
 
-                <span className="pull-right"><button className="btn btn-info">Submit</button></span>
+                <span>* Mandatory fields</span><span className="pull-right"><button className="btn btn-info">Submit</button></span>
             </form>
           </div>{/* Role-form */}
           <div className="role-instructions">

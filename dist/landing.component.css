@@ -292,3 +292,10 @@ body {
     font-size: 72px;
     font-weight: 600;
 }
+.navbar-brand>img {
+    display: block;
+    float: left;
+    position: relative;
+    top: -11px;
+    left: -15px;
+}

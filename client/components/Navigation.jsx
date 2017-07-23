@@ -41,7 +41,7 @@ class Navigation  extends React.Component {
                         Menu <i className="fa fa-bars"></i>
                     </button>
                     <a className="navbar-brand page-scroll" href="#page-top">
-                        <i className="fa fa-play-circle"></i> CloudDezk
+                        <img src='/assets/img/logo.svg' /> CloudDezk
                     </a>
                 </div>
 
@@ -79,7 +79,7 @@ class Navigation  extends React.Component {
                 <div id="navbar-right">
                   <ul className="nav navbar-nav">
                     <li>
-                        <a className="page-scroll highlight-anchor" href="/#scroll_about">Subscribe</a>
+                        <Link className="page-scroll highlight-anchor" to="/register">Subscribe</Link>
                     </li>
                   </ul>
                 </div>

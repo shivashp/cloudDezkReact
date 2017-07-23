@@ -1,6 +1,6 @@
 import React from 'react'
 import { cfg } from '../config/production.js';
-
+import SubscribeCard from './widgets/SubscribeCard.jsx';
 function subscribe(plan) {
 
 //    console.log(window.StripeCheckout);
@@ -104,6 +104,9 @@ class Subscription extends React.Component {
         <div className="sub-nav-details">Subscribe to one of our affordable Plans</div>
               {
                   plans.map(function(r,i) {
+                    return <div className="col-md-4">
+                        <SubscribeCard r={r} key={i}/>
+                    </div>
 
                       return <div key={i} className="col-md-4 col-sm-6 hero-feature">
                           <div className="thumbnail">
