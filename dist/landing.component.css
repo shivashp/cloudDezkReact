@@ -3,21 +3,11 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
- .content-section {
-     padding-top: 75px;
-     padding-bottom: 75px;
-     text-align: justify;
- }
 @media (min-width: 768px) {
   p {
-    margin: 0 0 25px;
-    font-size: 21px;
-    color: #4d4d4d;
-    line-height: 30px;
-  }
-  .content-section {
-      padding-top: 120px;
-      padding-bottom: 120px;
+    margin: 0 0 35px;
+    /*font-size: 20px;*/
+    line-height: 1.6;
   }
 }
 
@@ -38,14 +28,10 @@
 }
 
 a {
-  color: #ed1e79;
-  font-weight: 600;
+  color: #ffc697;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-a.highlight-anchor {
-    color: #ed1e79;
 }
 
 a:hover,
@@ -67,22 +53,20 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
-.intro-text {
-  color:white;
-}
 header.intro {
-  top: 51px;
-  height: 545px;
+  top: 0;
+  height: 575px;
   position: relative;
   z-index: 2;
   display: block;
+
   background-color: #3877be;
   background-image: url(/assets/img/CloudDezk_Hero_Image.svg);
-  /* background-repeat: no-repeat; */
+  /*background-repeat: no-repeat;*/
   background-position: center 600px, center 570px, center 560px;
   background-size: 100%;
-  padding-top: 135px;
-  padding-bottom: 135px;
+
+  padding-top: 115px;
 }
 header.intro:after {
   /*background-image: url(/assets/img/top-clouds-inversed.svg),url(/assets/img/middle-clouds-inversed.svg),url(/assets/img/bottom-clouds-inversed.svg);;*/
@@ -111,14 +95,13 @@ header.intro:after {
     padding: 0;
   }
   .intro .intro-body .brand-heading {
-      font-size: 72px;
-      font-weight: 600;
+    font-size: 90px;
+    margin-bottom: 20px;
   }
   .intro .intro-body .intro-text {
-    font-size: 21px;
-    font-weight: 300;
-    margin-bottom: 50px;
-}
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
 }
 .btn-circle {
   width: 70px;
@@ -184,7 +167,12 @@ header.intro:after {
     transform: scale(1);
   }
 }
-
+.content-section {
+  padding: 75px 0 50px;
+  background-color: #fcf8f5;
+  color: #333;
+  border-top: 2px dotted #ccc;
+}
 section#about, section#contact, section#subscription {
   border: none;
 }
@@ -200,6 +188,9 @@ section#about, section#contact, section#subscription {
 }
 
 @media (min-width: 767px) {
+  .content-section {
+    padding-top: 75px;
+  }
   .subscription-section {
     padding: 75px 0;
     box-shadow: 0px 0px 5px rgba(0,0,0,.5) inset;
@@ -216,19 +207,10 @@ section#about, section#contact, section#subscription {
   transition: all 0.3s ease-in-out;
   border-radius: 0;
 }
-.intro .btn {
-    color: #ed1e79;
-    border-radius: 6px;
-    font-size: 21px;
-    font-weight: 600;
-    text-transform: capitalize;
-    padding: 10px 50px;
-}
-.intro .btn:hover {
-  border-color:white;
-  background: white;
-  color:#ed1e79;
-
+.btn-default {
+  border: 1px solid #42DCA3;
+  color: #ffc697;
+  background-color: transparent;
 }
 .btn-default:hover,
 .btn-default:focus {
@@ -279,23 +261,4 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
-  background-color: #fff;
-}
-.content-section u {
-    font-weight: 600;
-    text-decoration: none;
-}
-#cloudaccess {
-    background: #f3faff;
-}
-.intro .intro-body .brand-heading {
-    font-size: 72px;
-    font-weight: 600;
-}
-.navbar-brand>img {
-    display: block;
-    float: left;
-    position: relative;
-    top: -11px;
-    left: -15px;
 }

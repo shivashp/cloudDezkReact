@@ -1,25 +1,60 @@
+import axios from 'axios';
+const url = 'localhost';
+
+
+const request = axios.create({
+    baseUrl: url,
+})
+
 export const FUNC = {
-  isInPattern: function (v,p) {
-          "use strict";
-          return p.test(v);
-  }
+    isInPattern: function (v, p) {
+        "use strict";
+        return p.test(v);
+    }
 }
 
-export const REGIONS= [
+
+export const CustomerFUNC = {
+    newCustomerRegister: ({firstName, lastName, email, phoneNumber, company, country, password}) => {
+        return new Promise((resolve, reject) => {
+            request({
+                method: 'post',
+                url: '/api/newCustomerRegister',
+                data: { firstName, lastName, email, phoneNumber, company, country, password }
+            })
+                .then(resolve)
+                .catch(reject);
+        });
+    },
+
+    newCustomerAccount: ({ customerid, accountid, region, arn, externalid, awslink}) => {
+        return new Promise((resolve, reject) => {
+            request({
+                method: 'post',
+                url: '/api/newCustomerAccount',
+                data: { customerid, accountid, region, arn, externalid, awslink }
+            })
+                .then(resolve)
+                .catch(reject);
+        });
+    }
+}
+
+export const REGIONS = [
     {viewValue: "---", value: ""},
-    {viewValue:'ap-northeast-1',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'ap-northeast-2',value:'ec2.ap-northeast-2.amazonaws.com'},
-    {viewValue:'ap-south-1',value:'ec2.ap-south-1.amazonaws.com'},
-    {viewValue:'ap-southeast-1',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'ap-southeast-2',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'ca-central-1',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'eu-central-1',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'eu-west-1',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'eu-west-2',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'us-east-1',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'us-east-2',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'us-west-1',value:'ec2.ap-northeast-1.amazonaws.com'},
-    {viewValue:'us-west-2',value:'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'ap-northeast-1', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'ap-northeast-2', value: 'ec2.ap-northeast-2.amazonaws.com'},
+    {viewValue: 'ap-south-1', value: 'ec2.ap-south-1.amazonaws.com'},
+    {viewValue: 'ap-southeast-1', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'ap-southeast-2', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'ca-central-1', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'eu-central-1', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'eu-west-1', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'eu-west-2', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'us-east-1', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'us-east-2', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'us-west-1', value: 'ec2.ap-northeast-1.amazonaws.com'},
+    {viewValue: 'us-west-2', value: 'ec2.ap-northeast-1.amazonaws.com'},
 ];
 
 export const COUNTRIES = [
