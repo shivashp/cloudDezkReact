@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Navigation from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
-import Landing_Page from './components/Landing_Page.jsx';
+import Page_Landing1 from './components/Page_Landing1.jsx';
 import Register from './components/Register.jsx';
 import { BrowserRouter, Route, Switch  } from 'react-router-dom';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
@@ -31,8 +31,9 @@ ReactDOM.render(
     <BrowserRouter>
     <div>
         <Navigation />
+
             <Switch>
-                <Route exact path='/' component={Landing_Page}/>
+                <Route exact path='/' component={Page_Landing1}/>
                 <Route exact path='/register' component={Register}/>
             </Switch>
 

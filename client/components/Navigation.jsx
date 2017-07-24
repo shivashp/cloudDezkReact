@@ -34,32 +34,41 @@ class Navigation  extends React.Component {
 
     render() {
         return <nav className="navbar navbar-custom navbar-fixed-top" role="navigation">
-            <div className="container" id="navbar-container">
+            <div className="container">
                 <div className="navbar-header">
                     <button type="button" className="navbar-toggle" data-toggle="collapse"
                             data-target=".navbar-main-collapse">
                         Menu <i className="fa fa-bars"></i>
                     </button>
                     <a className="navbar-brand page-scroll" href="#page-top">
-                        <img src='/assets/img/logo.svg' /> CloudDezk
+                        <i className="fa fa-play-circle"></i> <span className="light">CloudDezk</span>
                     </a>
                 </div>
 
                 {/*<!-- Collect the nav links, forms, and other content for toggling -->*/}
-                <div className="collapse navbar-collapse navbar-main-collapse" id="navbar-center">
+                <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
                     <ul className="nav navbar-nav">
                         {/*<!-- Hidden li included to remove active class from about link when scrolled up past about section -->*/}
                         <li className="hidden">
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a className="page-scroll" href="/#scroll_about">About</a>
+                            <a className="page-scroll" href="/#scroll_cloudaccess">WHAT WE DO</a>
                         </li>
                         <li>
-                            <a className="page-scroll" href="/#scroll_cloudaccess">CloudAccess</a>
+                            <a className="page-scroll" href="/register#top">REGISTER</a>
                         </li>
                         <li>
-                            <a className="page-scroll" href="/#scroll_contact">Contact</a>
+                            <a className="page-scroll" href="http://52.38.150.145/dashboard">POLICY ADVISOR</a>
+                        </li>
+                        <li>
+                            <a className="page-scroll" href="http://52.89.225.211">POLICY SIMULATOR</a>
+                        </li>
+                        <li>
+                            <a className="page-scroll" href="/#scroll_about">ABOUT</a>
+                        </li>
+                        <li>
+                            <a className="page-scroll" href="/#scroll_contact">CONTACT</a>
                         </li>
                         {/*<li>*/}
                             {/*<a className="page-scroll" href="/#scroll_cloudaccess">CloudAccess</a>*/}
@@ -75,13 +84,6 @@ class Navigation  extends React.Component {
                             {/*<a className="page-scroll" href="/rolelink#top">Role link</a>*/}
                         {/*</li>*/}
                     </ul>
-                </div>
-                <div id="navbar-right">
-                  <ul className="nav navbar-nav">
-                    <li>
-                        <Link className="page-scroll highlight-anchor" to="/register">Subscribe</Link>
-                    </li>
-                  </ul>
                 </div>
                 {/*<!-- /.navbar-collapse -->*/}
             </div>
