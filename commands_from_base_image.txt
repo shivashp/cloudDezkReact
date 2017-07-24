@@ -28,6 +28,7 @@ TO UPDATE
    75  git pull
    76  npm run buildClient
    77  npm run buildServer
+   (Windows run set Env=production and node server.js)
    
 -- THE BELOW IS ONLY REQUIRED WHEN TIMUX IS INSTALLED
    83  tmux
