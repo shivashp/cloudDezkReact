@@ -71,18 +71,19 @@ a:focus {
   color:white;
 }
 header.intro {
-  top: 51px;
-  height: 545px;
+  top: 54px;
+  height: 520px;
   position: relative;
   z-index: 2;
   display: block;
   background-color: #3877be;
-  background-image: url(/assets/img/CloudDezk_Hero_Image.svg);
+  background-image: url(/assets/img/CloudDezk_Hero_Image.jpg);
   /* background-repeat: no-repeat; */
   background-position: center 600px, center 570px, center 560px;
-  background-size: 100%;
+  /* background-size: 128%; */
   padding-top: 135px;
   padding-bottom: 135px;
+  background-position: -50px -3px;
 }
 header.intro:after {
   /*background-image: url(/assets/img/top-clouds-inversed.svg),url(/assets/img/middle-clouds-inversed.svg),url(/assets/img/bottom-clouds-inversed.svg);;*/
@@ -246,6 +247,20 @@ ul.banner-social-buttons {
   }
 }
 @media (max-width: 767px) {
+  header.intro {
+    background-position: -133px -3px;
+  }
+  .intro-body.container>div {
+    text-align: center !important;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 48px !important;
+    margin-top: 31px;
+  }
+  .intro .btn {    
+    font-size: 13px;
+    margin-top: 12px;
+  }
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
